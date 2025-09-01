@@ -19,6 +19,12 @@ def remove_task(index):
         print(f"Removed: {removed}")
     else:
         print("Invalid task number!")
+        
+        def save_tasks():
+         with open("tasks.txt", "w") as f:
+          for task in tasks:
+             f.write(task + "\n")
+
 
 # Simple test
 if __name__ == "__main__":
@@ -27,3 +33,4 @@ if __name__ == "__main__":
     show_tasks()
     remove_task(0)
     show_tasks()
+
